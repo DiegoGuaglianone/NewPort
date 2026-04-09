@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd /c \"cd /D c:\\\\Users\\\\diego\\\\OneDrive\\\\Desktop\\\\NewPort && npm run build 2>&1\")"
+    ]
+  }
+}
