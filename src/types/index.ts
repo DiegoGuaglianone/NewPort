@@ -10,7 +10,9 @@ export interface Project {
 
 export interface Skill {
   name: string
-  icon: string
+  icon: string        // emoji fallback
+  imageUrl?: string   // URL to tech logo (e.g. Simple Icons CDN)
+  color?: string      // brand hex color for glow, e.g. "#61DAFB"
   years?: number
 }
 
