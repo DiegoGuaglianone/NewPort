@@ -26,6 +26,15 @@ export function Hero() {
           rotateX: -40,
           stagger: 0.04,
           duration: 1,
+          // FIX: GSAP leaves an inline `transform` on each .char span after the
+          // animation ends. That inline transform promotes each span to its own
+          // compositing layer, which breaks the parent GradientText's
+          // `background-clip: text` gradient — the browser can't paint the
+          // gradient through isolated child compositing layers, so the text
+          // stays invisible. `clearProps: 'transform'` tells GSAP to remove the
+          // inline style once the tween completes, restoring normal rendering
+          // and letting the gradient show through correctly.
+          clearProps: 'transform',
         })
       }
 
@@ -62,7 +71,7 @@ export function Hero() {
         ))}
         <br />
         <GradientText animate>
-          {'Gualianone'.split('').map((char, i) => (
+          {'Guaglianone'.split('').map((char, i) => (
             <span key={`last-${i}`} className="char inline-block">
               {char}
             </span>
@@ -75,7 +84,7 @@ export function Hero() {
       </p>
 
       <p className="text-white/30 text-sm mb-10">
-        React · TypeScript · Node.js · Supabase
+        React · TypeScript · C# · ASP.NET Core · MySql
       </p>
 
       {/* CTA buttons */}
@@ -104,7 +113,7 @@ export function Hero() {
 
         <div className="flex items-center gap-3 ml-2">
           <a
-            href="https://github.com/diegogualianone"
+            href="https://github.com/DiegoGuaglianone"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all duration-300"
@@ -112,7 +121,7 @@ export function Hero() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            href="https://linkedin.com/in/diegogualianone"
+            href="https://linkedin.com/in/diego-guaglianone"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-white/30 transition-all duration-300"

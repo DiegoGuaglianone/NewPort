@@ -41,8 +41,8 @@ export function Contact() {
           />
           <div className="flex flex-col gap-4">
             <SocialLink href="mailto:diegogualianone.dev@gmail.com" icon={Mail} label="diegogualianone.dev@gmail.com" external={false} />
-            <SocialLink href="https://github.com/diegogualianone" icon={Github} label="github.com/diegogualianone" />
-            <SocialLink href="https://linkedin.com/in/diegogualianone" icon={Linkedin} label="linkedin.com/in/diegogualianone" />
+            <SocialLink href="https://github.com/DiegoGuaglianone" icon={Github} label="github.com/diegogualianone" />
+            <SocialLink href="https://linkedin.com/in/diego-guaglianone" icon={Linkedin} label="linkedin.com/in/diegogualianone" />
           </div>
         </div>
 
